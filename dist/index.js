@@ -40,7 +40,7 @@
 	};
 
 	var checkObserverType = function checkObserverType(type) {
-	  if (typeof str !== 'string') return false;
+	  if (typeof type !== 'string') return false;
 	  return type === 'resize' || type === 'width' || type === 'height';
 	};
 	/**
@@ -72,6 +72,7 @@
 	  }
 
 	  observerDom.appendChild(observerDomChild);
+	  element.appendChild(observerDom);
 	  observerDom.scrollTop = maxHeight;
 	  observerDom.scrollLeft = maxWidth;
 
@@ -82,14 +83,13 @@
 	  observerDom.addEventListener('scroll', fn, supportsPassive ? {
 	    passive: true
 	  } : false);
-	  element.appendChild(observerDom);
 	  return function () {
 	    return observerDom.removeEventListener('scroll', fn);
 	  };
 	}; // 监听宽高的变化
 
 
-	var DOMObserverResize = function DOMObserverResize(element, callback) {
+	var DOMObserveResize = function DOMObserveResize(element, callback) {
 	  return DOMObserver('resize', element, callback);
 	}; // 只监听宽度的变化
 
@@ -104,9 +104,9 @@
 	};
 
 	exports.DOMObserveHeight = DOMObserveHeight;
+	exports.DOMObserveResize = DOMObserveResize;
 	exports.DOMObserveWidth = DOMObserveWidth;
 	exports.DOMObserver = DOMObserver;
-	exports.DOMObserverResize = DOMObserverResize;
 	exports.default = DOMObserver;
 
 	Object.defineProperty(exports, '__esModule', { value: true });

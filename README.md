@@ -37,7 +37,7 @@
     }); // ===  DOMObserver('height', someDom, ()=> {})
 
     // 监听Dom 的resize变化
-    const unObserver4 = DOMObserverResize(some, () => {
+    const unObserver4 = DOMObserveResize(some, () => {
         console.log('DOM 尺寸发生变化了');
     }); // ===  DOMObserver('resize', someDom, ()=> {})
 
