@@ -1,0 +1,29 @@
+{
+  "name": "observe-dom-resize",
+  "version": "1.0.0",
+  "description": "observe dom resize",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnApache/observe-dom-resize.git"
+  },
+  "author": "JohnApache",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnApache/observe-dom-resize/issues"
+  },
+  "homepage": "https://github.com/JohnApache/observe-dom-resize#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "rollup-plugin-babel": "^4.3.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}
