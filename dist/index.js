@@ -55,13 +55,13 @@
 	  if (!isHTMLElement(element)) throw new TypeError('element is need a HTMLElement');
 	  if (!isSingleLabel(element)) throw new TypeError('Unsupported tag type. Change the tag or wrap it in a supported tag(e.g. div).');
 	  if (!isFunction(callback)) throw new TypeError('callback is need a function');
-	  var width = element.offsetWidth || 1;
-	  var height = element.offsetHeight || 1;
-	  var maxWidth = width * 1e4;
-	  var maxHeight = height * 1e4;
+	  var maxWidth = 3e7,
+	      maxHeight = 3e7,
+	      maxLeft = 3.35544e+07,
+	      maxTop = 3.35544e+07;
 	  var observerDom = document.createElement('div');
 	  var observerDomChild = document.createElement('div');
-	  observerDom.style.cssText = "position:absolute;width:100%;height:100%;left:".concat(-1e7, "px;top:0;overflow:hidden");
+	  observerDom.style.cssText = "position:absolute;width:100%;height:100%;left:".concat(-maxLeft, "px;top:").concat(-maxTop, "px;overflow:hidden");
 
 	  if (observerType === 'width') {
 	    observerDomChild.style.cssText = "width:".concat(maxWidth, "px;height:100%");

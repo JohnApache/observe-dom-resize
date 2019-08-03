@@ -7,7 +7,7 @@
 
 ## 安装方法
 ```javascript
-    npm install observer-dom-resize
+    npm install observe-dom-resize
 ```
 
 ## 示例
