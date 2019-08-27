@@ -1,17 +1,18 @@
 const presets = [
-	[
-		'@babel/env',
-		{
-			targets: {
-				edge: '17',
-				firefox: '60',
-				chrome: '67',
-				safari: '11.1',
-				ie: '9'
-			},
-			useBuiltIns: 'usage',
-		},
-	],
+	'@babel/env'
 ];
-  
-module.exports = { presets };
+
+const plugins = [
+	[
+		'@babel/plugin-transform-runtime', 
+		{
+			corejs: 3
+		}
+	]
+];
+
+const ignore = [
+	'node_modules/**'
+];
+
+module.exports = { presets, plugins, ignore };

@@ -14,7 +14,8 @@
 
 ### 监听dom尺寸变化
 ```javascript
-    import DOMObserver, {
+    import {
+        DOMObserver
         DOMObserverResize,
 	    DOMObserveWidth,
         DOMObserveHeight
